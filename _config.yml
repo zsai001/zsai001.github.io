@@ -102,6 +102,17 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: aircloud
 
+sidebar-avatar: img/avatar.jpeg
+
+
+# weibo_username:     3286578617
+# zhihu_username:     ai-er-lan-xue-da
+github_username:    zsai001
+twitter_username:   zsai010
+# facebook_username:  xiaotao.nie.5
+# linkedin_username:  小涛-聂-80964aba
+
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
