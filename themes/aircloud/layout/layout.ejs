@@ -28,6 +28,11 @@
         <!-- Main Content -->
         <%- body %>
     </div>
+    <% if(is_post()){ %>
+    <div class="index-right">
+        <%- partial('_partial/toc', {item: page, index: false}) %>
+    </div>
+    <% } %>
 </div>
 
 <%- partial('_partial/footer', null, {cache: false}) %>

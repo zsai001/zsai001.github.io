@@ -1,0 +1,172 @@
+/* 紧凑的文章样式 */
+
+/* 文章容器 */
+.post-container {
+    line-height: 1.6 !important;
+}
+
+/* 文章标题 */
+.post-container .post-title {
+    margin-bottom: 8px !important;
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+}
+
+/* 文章元信息 */
+.post-container .post-meta {
+    margin-bottom: 16px !important;
+    font-size: 12px !important;
+}
+
+/* 文章内容 */
+.post-content {
+    line-height: 1.6 !important;
+    font-size: 14px !important;
+}
+
+/* 段落间距 */
+.post-content p {
+    margin-bottom: 12px !important;
+    line-height: 1.6 !important;
+    text-indent: 1.5em !important;
+}
+
+/* 标题间距 */
+.post-content h1 {
+    margin-top: 24px !important;
+    margin-bottom: 12px !important;
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+}
+
+.post-content h2 {
+    margin-top: 20px !important;
+    margin-bottom: 10px !important;
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+}
+
+.post-content h3 {
+    margin-top: 18px !important;
+    margin-bottom: 8px !important;
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+}
+
+.post-content h4 {
+    margin-top: 16px !important;
+    margin-bottom: 8px !important;
+    font-size: 15px !important;
+    line-height: 1.3 !important;
+}
+
+.post-content h5 {
+    margin-top: 14px !important;
+    margin-bottom: 6px !important;
+    font-size: 14px !important;
+    line-height: 1.3 !important;
+}
+
+.post-content h6 {
+    margin-top: 12px !important;
+    margin-bottom: 6px !important;
+    font-size: 13px !important;
+    line-height: 1.3 !important;
+}
+
+/* 列表间距 */
+.post-content ul,
+.post-content ol {
+    margin-bottom: 12px !important;
+    padding-left: 1.5em !important;
+}
+
+.post-content ul li,
+.post-content ol li {
+    margin-bottom: 4px !important;
+    margin-top: 4px !important;
+    line-height: 1.5 !important;
+}
+
+/* 引用块 */
+.post-content blockquote {
+    margin: 12px 0 !important;
+    margin-left: 1.5em !important;
+    margin-right: 1.5em !important;
+    padding: 8px 0 !important;
+}
+
+.post-content blockquote p {
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+}
+
+/* 表格 */
+.post-content table {
+    margin: 12px 0 !important;
+    font-size: 13px !important;
+}
+
+/* 图片 */
+.post-content p img {
+    margin: 8px 0 !important;
+    width: 70% !important;
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 768px) {
+    .post-content {
+        font-size: 13px !important;
+    }
+    
+    .post-content p {
+        text-indent: 1em !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .post-content h1 {
+        font-size: 18px !important;
+        margin-top: 20px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .post-content h2 {
+        font-size: 16px !important;
+        margin-top: 16px !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .post-content h3 {
+        font-size: 15px !important;
+        margin-top: 14px !important;
+        margin-bottom: 6px !important;
+    }
+}
+
+/* 代码块移动端适配 */
+@media screen and (max-width: 768px) {
+    .highlight pre,
+    pre {
+        padding: 10px !important;
+        font-size: 12px !important;
+    }
+    
+    .highlight .gutter pre {
+        padding: 10px 6px !important;
+        min-width: 35px !important;
+        width: 35px !important;
+    }
+    
+    .highlight .code pre {
+        padding: 10px 8px !important;
+        width: calc(100% - 35px) !important;
+    }
+    
+    .highlight .gutter {
+        width: 35px !important;
+    }
+    
+    .highlight .code {
+        width: calc(100% - 35px) !important;
+    }
+} 

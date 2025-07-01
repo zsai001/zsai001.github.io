@@ -1,0 +1,319 @@
+/* Claude.ai 风格的代码样式 */
+
+/* 基础代码块样式 */
+pre,
+.highlight {
+  background: #1a1a1a !important;
+  border-radius: 6px !important;
+  border: 1px solid #333 !important;
+  margin: 16px 0 !important;
+  padding: 0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* 行内代码样式 */
+code {
+  background: #2d2d2d !important;
+  color: #e6e6e6 !important;
+  padding: 1px 4px !important;
+  border-radius: 3px !important;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+  font-size: 0.85em !important;
+  font-weight: 400 !important;
+  border: 1px solid #404040 !important;
+}
+
+/* 代码块内的代码不应用行内样式 */
+pre code {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  color: #e6e6e6 !important;
+  font-size: 14px !important;
+}
+
+/* 代码块内容 */
+.highlight pre,
+pre {
+  background: #1a1a1a !important;
+  color: #e6e6e6 !important;
+  padding: 12px !important;
+  margin: 0 !important;
+  border: none !important;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+  overflow-x: auto !important;
+  white-space: pre !important;
+}
+
+/* 行号样式 */
+.highlight .gutter pre {
+  background: #262626 !important;
+  color: #666 !important;
+  border-right: 1px solid #404040 !important;
+  padding: 12px 8px !important;
+  text-align: right !important;
+  user-select: none !important;
+  min-width: 40px !important;
+  width: 40px !important;
+  box-sizing: border-box !important;
+}
+
+.highlight .code pre {
+  background: #1a1a1a !important;
+  padding: 12px !important;
+  width: calc(100% - 40px) !important;
+  box-sizing: border-box !important;
+}
+
+/* 表格布局调整 */
+.highlight table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 0 !important;
+  table-layout: fixed !important;
+}
+
+.highlight td {
+  padding: 0 !important;
+  border: none !important;
+  vertical-align: top !important;
+}
+
+.highlight .gutter {
+  width: 40px !important;
+}
+
+.highlight .code {
+  width: calc(100% - 40px) !important;
+}
+
+/* 代码语言标签 */
+.highlight figcaption {
+  background: #262626 !important;
+  color: #ccc !important;
+  padding: 8px 16px !important;
+  margin: 0 !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  border-bottom: 1px solid #404040 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+
+.highlight figcaption a {
+  color: #ccc !important;
+  text-decoration: none !important;
+}
+
+.highlight figcaption a:hover {
+  color: #fff !important;
+  border-bottom: 1px solid #fff !important;
+}
+
+/* 语法高亮颜色 - 类似 Claude.ai 的配色方案 */
+
+/* 注释 */
+pre .comment,
+.highlight .comment {
+  color: #6a9955 !important;
+  font-style: italic !important;
+}
+
+/* 字符串 */
+pre .string,
+pre .value,
+.highlight .string,
+.highlight .value {
+  color: #ce9178 !important;
+}
+
+/* 关键字 */
+pre .keyword,
+pre .built_in,
+.highlight .keyword,
+.highlight .built_in {
+  color: #569cd6 !important;
+  font-weight: bold !important;
+}
+
+/* 函数名 */
+pre .function,
+pre .title,
+.highlight .function,
+.highlight .title {
+  color: #dcdcaa !important;
+}
+
+/* 数字 */
+pre .number,
+pre .literal,
+.highlight .number,
+.highlight .literal {
+  color: #b5cea8 !important;
+}
+
+/* 变量和属性 */
+pre .variable,
+pre .attribute,
+pre .attr,
+.highlight .variable,
+.highlight .attribute,
+.highlight .attr {
+  color: #9cdcfe !important;
+}
+
+/* 标签 */
+pre .tag,
+.highlight .tag {
+  color: #569cd6 !important;
+}
+
+/* 标签名 */
+pre .tag .title,
+pre .tag .name,
+.highlight .tag .title,
+.highlight .tag .name {
+  color: #569cd6 !important;
+}
+
+/* 类名 */
+pre .class,
+pre .type,
+.highlight .class,
+.highlight .type {
+  color: #4ec9b0 !important;
+}
+
+/* 操作符 */
+pre .operator,
+.highlight .operator {
+  color: #d4d4d4 !important;
+}
+
+/* 括号和分隔符 */
+pre .punctuation,
+.highlight .punctuation {
+  color: #d4d4d4 !important;
+}
+
+/* 正则表达式 */
+pre .regexp,
+.highlight .regexp {
+  color: #d16969 !important;
+}
+
+/* 常量 */
+pre .constant,
+.highlight .constant {
+  color: #569cd6 !important;
+}
+
+/* 元数据 */
+pre .meta,
+.highlight .meta {
+  color: #569cd6 !important;
+}
+
+/* 预处理器 */
+pre .preprocessor,
+.highlight .preprocessor {
+  color: #c586c0 !important;
+}
+
+/* 删除和添加的代码（diff） */
+pre .deletion,
+.highlight .deletion {
+  background: rgba(244, 63, 94, 0.15) !important;
+  color: #f43f5e !important;
+}
+
+pre .addition,
+.highlight .addition {
+  background: rgba(34, 197, 94, 0.15) !important;
+  color: #22c55e !important;
+}
+
+/* 特殊样式：JavaScript */
+pre .javascript .function,
+.highlight .javascript .function {
+  color: #569cd6 !important;
+}
+
+/* 特殊样式：CSS */
+pre .css .id,
+pre .css .class,
+.highlight .css .id,
+.highlight .css .class {
+  color: #d7ba7d !important;
+}
+
+pre .css .property,
+.highlight .css .property {
+  color: #9cdcfe !important;
+}
+
+/* 特殊样式：HTML */
+pre .xml .tag,
+pre .html .tag,
+.highlight .xml .tag,
+.highlight .html .tag {
+  color: #569cd6 !important;
+}
+
+/* 特殊样式：JSON */
+pre .json .attribute,
+.highlight .json .attribute {
+  color: #9cdcfe !important;
+}
+
+/* 特殊样式：YAML */
+pre .yaml .meta,
+.highlight .yaml .meta {
+  color: #569cd6 !important;
+}
+
+
+
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+  .highlight pre,
+  pre {
+    padding: 16px !important;
+    font-size: 13px !important;
+  }
+  
+  .highlight .gutter pre {
+    padding: 16px 8px !important;
+    min-width: 40px !important;
+  }
+  
+  .highlight .code pre {
+    padding: 16px 12px !important;
+  }
+}
+
+/* 滚动条样式（现代浏览器） */
+.highlight pre::-webkit-scrollbar,
+pre::-webkit-scrollbar {
+  height: 8px !important;
+}
+
+.highlight pre::-webkit-scrollbar-track,
+pre::-webkit-scrollbar-track {
+  background: #262626 !important;
+  border-radius: 4px !important;
+}
+
+.highlight pre::-webkit-scrollbar-thumb,
+pre::-webkit-scrollbar-thumb {
+  background: #404040 !important;
+  border-radius: 4px !important;
+}
+
+.highlight pre::-webkit-scrollbar-thumb:hover,
+pre::-webkit-scrollbar-thumb:hover {
+  background: #505050 !important;
+} 

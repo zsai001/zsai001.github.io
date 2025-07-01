@@ -1,0 +1,85 @@
+/* 布局优化 - 解决文章区域太窄和布局不对称问题 */
+
+/* 扩大整体容器宽度，从1024px改为1400px */
+.index-container {
+    width: 1400px !important;
+    max-width: 1400px !important;
+}
+
+/* 调整左侧边栏宽度，保持统一 */
+.index-container .index-left {
+    width: 260px !important;
+}
+
+/* 调整文章区域，增加可用宽度但为TOC留出空间 */
+.index-container .index-middle {
+    flex: 1 !important;
+    padding: 0 20px !important; /* 添加一些内边距 */
+    margin-right: 280px !important; /* 为右侧TOC留出空间 */
+}
+
+/* 调整右侧边栏，使布局更对称 */
+.index-right {
+    position: fixed !important;
+    right: calc((100vw - 1400px) / 2 + 20px) !important; /* 相对于容器右边20px */
+    top: 100px !important;
+    width: 260px !important; /* 与左侧边栏宽度一致 */
+    z-index: 50 !important;
+    max-height: calc(100vh - 120px) !important; /* 设置最大高度，避免超出屏幕 */
+    overflow-y: auto !important; /* 垂直滚动 */
+}
+
+/* 响应式调整 - 中等屏幕 */
+@media screen and (max-width: 1440px) {
+    .index-container {
+        width: calc(100% - 40px) !important;
+        max-width: calc(100% - 40px) !important;
+        margin: 0 20px !important;
+    }
+    
+    .index-right {
+        right: 20px !important;
+        width: 240px !important;
+        max-height: calc(100vh - 120px) !important;
+        overflow-y: auto !important;
+    }
+    
+    .index-container .index-middle {
+        margin-right: 260px !important; /* 为右侧边栏留空间 */
+    }
+}
+
+/* 响应式调整 - 小屏幕（原有的1180px断点） */
+@media screen and (max-width: 1180px) {
+    .index-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 40px 0 10px !important;
+    }
+    
+    .index-container .index-left {
+        width: 180px !important;
+    }
+    
+    .index-container .index-middle {
+        margin-right: 20px !important;
+        padding: 0 10px !important;
+    }
+    
+    .index-right {
+        display: none !important; /* 小屏幕隐藏右侧边栏 */
+    }
+}
+
+/* 移动端调整 */
+@media screen and (max-width: 680px) {
+    .index-container {
+        padding: 0 25px !important;
+    }
+    
+    .index-container .index-middle {
+        margin-right: 0 !important;
+        padding: 0 !important;
+    }
+} 

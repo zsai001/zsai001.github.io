@@ -245,6 +245,199 @@ Hexo 是一个功能强大且易用的静态博客框架，通过简单的 Markd
 
 ---
 
+## 🎨 代码样式演示
+
+本博客现在使用了类似 Claude.ai 的现代化代码样式！以下是一些代码示例：
+
+### JavaScript 示例
+
+```javascript
+// 现代 ES6+ 语法
+class BlogManager {
+    constructor(config) {
+        this.config = config;
+        this.posts = new Map();
+    }
+
+    async createPost(title, content) {
+        const post = {
+            id: this.generateId(),
+            title,
+            content,
+            createdAt: new Date(),
+            tags: this.extractTags(content)
+        };
+        
+        this.posts.set(post.id, post);
+        return post;
+    }
+
+    generateId() {
+        return `post_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    }
+
+    extractTags(content) {
+        const tagRegex = /#(\w+)/g;
+        return [...content.matchAll(tagRegex)].map(match => match[1]);
+    }
+}
+
+// 使用示例
+const blog = new BlogManager({
+    theme: 'aircloud',
+    highlight: 'claude-style'
+});
+
+blog.createPost('Hexo 教程', '学习如何使用 #Hexo #博客')
+    .then(post => console.log('文章创建成功:', post))
+    .catch(err => console.error('创建失败:', err));
+```
+
+### Python 示例
+
+```python
+# Python 数据处理示例
+import pandas as pd
+import numpy as np
+from pathlib import Path
+
+class BlogAnalyzer:
+    def __init__(self, data_path: Path):
+        self.data_path = data_path
+        self.df = None
+    
+    def load_data(self) -> pd.DataFrame:
+        """加载博客数据"""
+        try:
+            self.df = pd.read_csv(self.data_path)
+            return self.df
+        except FileNotFoundError:
+            print(f"文件 {self.data_path} 不存在")
+            return pd.DataFrame()
+    
+    def analyze_tags(self) -> dict:
+        """分析标签使用情况"""
+        if self.df is None:
+            self.load_data()
+        
+        tag_counts = {}
+        for tags in self.df['tags'].dropna():
+            for tag in tags.split(','):
+                tag = tag.strip()
+                tag_counts[tag] = tag_counts.get(tag, 0) + 1
+        
+        return dict(sorted(tag_counts.items(), key=lambda x: x[1], reverse=True))
+
+# 使用示例
+analyzer = BlogAnalyzer(Path('./blog_data.csv'))
+popular_tags = analyzer.analyze_tags()
+print("最受欢迎的标签:", popular_tags)
+```
+
+### CSS 示例
+
+```css
+/* 现代 CSS 样式 */
+.code-block {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    border-radius: 12px;
+    box-shadow: 
+        0 4px 12px rgba(0, 0, 0, 0.15),
+        0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.code-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255, 255, 255, 0.2) 50%, 
+        transparent 100%);
+}
+
+.copy-button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+}
+
+.copy-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+```
+
+### JSON 配置示例
+
+```json
+{
+  "blog": {
+    "name": "zsai001的博客",
+    "theme": "aircloud",
+    "features": {
+      "codeHighlight": "claude-style",
+      "copyButton": true,
+      "lineNumbers": true,
+      "darkMode": true
+    },
+    "deployment": {
+      "platform": "github-pages",
+      "branch": "gh-pages",
+      "automaticDeploy": true
+    },
+    "seo": {
+      "sitemap": true,
+      "robots": true,
+      "analytics": "google"
+    }
+  }
+}
+```
+
+### YAML 配置示例
+
+```yaml
+# Hexo 配置文件
+title: zsai001的博客
+subtitle: 记录生活，记录学习
+description: 记录生活，记录学习
+keywords: 生活, 学习, 技术, 博客
+author: zsai001
+language: zh-CN
+timezone: Asia/Shanghai
+
+# 代码高亮配置
+highlight:
+  enable: true
+  theme: claude-dark
+  line_number: true
+  auto_detect: false
+  tab_replace: '  '
+  wrap: true
+  hljs: false
+
+# 主题配置
+theme: aircloud
+theme_config:
+  code_style: claude
+  copy_button: true
+  dark_mode: true
+```
+
+现在代码块拥有：
+- 🌙 **深色主题**：类似 Claude.ai 的现代深色背景
+- 🎨 **语法高亮**：清晰的色彩区分和现代配色方案
+- �� **复制功能**：悬停显示复制按钮，一键复制代码
+- 📱 **响应式设计**：在移动设备上也有很好的显示效果
+- ✨ **现代动画**：平滑的交互动画和悬停效果
+
+---
+
 *希望这篇指南能帮助你快速上手 Hexo 博客！如有问题，欢迎留言讨论。*
 
 

@@ -1,0 +1,132 @@
+/* 评论区域宽度修复 - 确保与文章内容宽度一致 */
+
+/* 评论容器宽度限制 */
+#comment-container,
+#lv-container,
+.gitment-container,
+.gitment-root-container,
+.giscus,
+.giscus-frame {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* 确保评论内容不超出文章宽度 */
+.gitment-container * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* 评论列表和编辑器宽度控制 */
+.gitment-comments-list,
+.gitment-editor-container,
+.gitment-comment,
+.gitment-header-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* 评论主体内容宽度 */
+.gitment-comment-main,
+.gitment-editor-main {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* 评论文本区域宽度 */
+.gitment-editor-body textarea,
+.gitment-comment-body,
+.gitment-editor-preview {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Giscus 特定的宽度控制 */
+.giscus {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    overflow: hidden !important;
+}
+
+/* 强制控制 giscus iframe 尺寸 - 减小宽度确保适应容器 */
+.giscus iframe,
+.giscus-frame,
+iframe.giscus-frame,
+iframe[title="Comments"] {
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    display: block !important;
+}
+
+/* 不同屏幕尺寸下进一步减小宽度 */
+@media screen and (max-width: 1400px) {
+    .giscus iframe,
+    .giscus-frame,
+    iframe.giscus-frame,
+    iframe[title="Comments"] {
+
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .giscus iframe,
+    .giscus-frame,
+    iframe.giscus-frame,
+    iframe[title="Comments"] {
+
+    }
+}
+
+/* 确保评论在文章页面中的对齐 */
+.post-container #comment-container,
+.post-container #lv-container,
+.post-container .giscus {
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 1180px) {
+    #comment-container,
+    #lv-container,
+    .gitment-container,
+    .giscus {
+        padding: 0 10px !important;
+    }
+    
+    .giscus iframe,
+    .giscus-frame {
+        max-width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    #comment-container,
+    #lv-container,
+    .gitment-container,
+    .giscus {
+        padding: 0 !important;
+    }
+    
+    .giscus iframe,
+    .giscus-frame {
+        max-width: 100% !important;
+    }
+    
+    .gitment-editor-body textarea {
+        font-size: 14px !important;
+    }
+} 
