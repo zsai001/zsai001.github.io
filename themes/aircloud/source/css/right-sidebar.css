@@ -9,24 +9,27 @@
     z-index: 50;
     max-height: calc(100vh - 120px); /* 设置最大高度，避免超出屏幕 */
     overflow-y: auto; /* 垂直滚动 */
-    scrollbar-width: thin; /* Firefox */
+    scrollbar-width: none !important; /* Firefox - 完全隐藏滚动条 */
     scrollbar-gutter: stable; /* 现代浏览器 */
     -ms-overflow-style: none !important; /* IE and Edge */
 }
 
-/* 隐藏右边栏容器的滚动条 */
+/* 完全隐藏右边栏容器的滚动条 */
 .index-right::-webkit-scrollbar {
-    width: 6px !important;
+    width: 0 !important;
+    height: 0 !important;
     background: transparent !important;
+    display: none !important;
 }
 
 .index-right::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.2) !important;
-    border-radius: 3px !important;
+    background: transparent !important;
+    display: none !important;
 }
 
 .index-right::-webkit-scrollbar-track {
     background: transparent !important;
+    display: none !important;
 }
 
 /* TOC滚动样式优化 - 隐藏滚动条但保持滚动功能 */

@@ -37,32 +37,50 @@ body {
     scrollbar-color: #c1c1c1 #f1f1f1;
 }
 
-/* 特定区域的滚动条样式 */
+/* 特定区域的滚动条样式 - 完全隐藏 */
+.index-right {
+    scrollbar-width: none !important; /* Firefox */
+    -ms-overflow-style: none !important; /* IE and Edge */
+}
+
 .index-right::-webkit-scrollbar {
-    width: 6px;
+    width: 0 !important;
+    height: 0 !important;
+    background: transparent !important;
+    display: none !important;
 }
 
 .index-right::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 3px;
+    background: transparent !important;
+    display: none !important;
 }
 
 .index-right::-webkit-scrollbar-track {
-    background: transparent;
+    background: transparent !important;
+    display: none !important;
 }
 
-/* TOC 滚动条样式 */
+/* TOC 滚动条样式 - 完全隐藏 */
+.toc-article {
+    scrollbar-width: none !important; /* Firefox */
+    -ms-overflow-style: none !important; /* IE and Edge */
+}
+
 .toc-article::-webkit-scrollbar {
-    width: 4px;
+    width: 0 !important;
+    height: 0 !important;
+    background: transparent !important;
+    display: none !important;
 }
 
 .toc-article::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.15);
-    border-radius: 2px;
+    background: transparent !important;
+    display: none !important;
 }
 
 .toc-article::-webkit-scrollbar-track {
-    background: transparent;
+    background: transparent !important;
+    display: none !important;
 }
 
 /* 移动端优化 */
@@ -73,10 +91,14 @@ body {
     }
     
     .index-right::-webkit-scrollbar {
-        width: 4px;
+        width: 0 !important;
+        height: 0 !important;
+        display: none !important;
     }
     
     .toc-article::-webkit-scrollbar {
-        width: 3px;
+        width: 0 !important;
+        height: 0 !important;
+        display: none !important;
     }
 } 
