@@ -101,6 +101,6 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: 'git'
-  repo: 'https://github.com/zsai001/zsai001.github.io'
+  type: git
+  repo: https://github.com/zsai001/zsai001.github.io
   branch: gh-pages
