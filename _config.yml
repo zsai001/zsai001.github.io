@@ -69,6 +69,10 @@ default_category: uncategorized
 category_map:
 tag_map:
 
+search:
+  path: search.json
+  field: post
+
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
 meta_generator: true
@@ -96,7 +100,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: aircloud
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
