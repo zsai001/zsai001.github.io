@@ -11,24 +11,29 @@
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="<%= page.title ? page.title + ' - ' + config.SEOTitle : config.SEOTitle %>">
     <meta property="og:description" content="<%= page.description || page.excerpt || config.description %>">
-    <meta property="og:type" content="<%= page.layout === 'post' ? 'article' : 'website' %>">
+    <meta property="og:type" content="<%= page.og_type || (page.layout === 'post' ? (config.og_type || 'article') : 'website') %>">
     <meta property="og:url" content="<%= full_url_for(page.path) %>">
     <meta property="og:site_name" content="<%= config.SEOTitle %>">
     <meta property="og:locale" content="<%= config.language %>">
     
     <!-- Open Graph Image -->
+    <% 
+    var isLargeImage = config.twitter_card === 'summary_large_image' || page.og_large_image;
+    var imageWidth = isLargeImage ? (config.og_large_image_width || 1200) : (config.og_image_width || 400);
+    var imageHeight = isLargeImage ? (config.og_large_image_height || 630) : (config.og_image_height || 400);
+    %>
     <% if (page.cover || page.thumbnail) { %>
     <meta property="og:image" content="<%= full_url_for(page.cover || page.thumbnail) %>">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:image:width" content="<%= imageWidth %>">
+    <meta property="og:image:height" content="<%= imageHeight %>">
     <% } else { %>
     <meta property="og:image" content="<%= full_url_for(config.site_image) %>">
-    <meta property="og:image:width" content="400">
-    <meta property="og:image:height" content="400">
+    <meta property="og:image:width" content="<%= imageWidth %>">
+    <meta property="og:image:height" content="<%= imageHeight %>">
     <% } %>
     
     <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="<%= config.twitter_card || 'summary_large_image' %>">
+    <meta name="twitter:card" content="<%= page.twitter_card || config.twitter_card || 'summary' %>">
     <meta name="twitter:title" content="<%= page.title ? page.title + ' - ' + config.SEOTitle : config.SEOTitle %>">
     <meta name="twitter:description" content="<%= page.description || page.excerpt || config.description %>">
     <% if (page.cover || page.thumbnail) { %>

@@ -14,7 +14,35 @@ timezone: Asia/Shanghai
 # SEO & Open Graph
 SEOTitle: zsai001的博客
 site_image: img/avatar.jpeg
-twitter_card: summary_large_image
+
+# Open Graph & Twitter Card 样式配置
+# Twitter Card 类型选项:
+# - summary: 小卡片，只显示标题、描述和小图片
+# - summary_large_image: 大卡片，显示标题、描述和大图片
+# - app: 应用卡片，用于移动应用
+# - player: 播放器卡片，用于视频/音频
+twitter_card: summary
+
+# Open Graph 类型选项:
+# - website: 普通网站页面
+# - article: 文章页面
+# - book: 书籍页面
+# - profile: 个人资料页面
+# - music.song: 音乐歌曲
+# - music.album: 音乐专辑
+# - music.playlist: 音乐播放列表
+# - music.radio_station: 广播电台
+# - video.movie: 电影
+# - video.episode: 视频剧集
+# - video.tv_show: 电视节目
+# - video.other: 其他视频
+og_type: article
+
+# 图片尺寸配置
+og_image_width: 400
+og_image_height: 400
+og_large_image_width: 1200
+og_large_image_height: 630
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'

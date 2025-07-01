@@ -8,6 +8,10 @@ keywords: Open Graph, SEO, 社交媒体, 分享预览
 excerpt: 本文演示了Hexo博客中Open Graph标签的完整功能，包括Facebook、Twitter等社交媒体的分享预览效果
 cover: img/avatar.jpeg
 thumbnail: img/avatar.jpeg
+# OG 样式配置 - 可以在每篇文章中单独设置
+twitter_card: summary
+og_type: article
+og_large_image: false
 ---
 
 ## 什么是 Open Graph？
