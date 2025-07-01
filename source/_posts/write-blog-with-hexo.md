@@ -2,6 +2,9 @@
 title: 使用Hexo写博客
 date: 2025-07-01 21:13:58
 tags: [Hexo, 博客, 静态网站, Node.js]
+description: 详细介绍如何使用Hexo搭建个人博客，包括安装配置、写作流程、主题定制和部署方法
+keywords: Hexo, 博客, 静态网站, Node.js, 教程
+excerpt: 基于Node.js的快速、简洁且高效的静态博客框架，支持Markdown语法，拥有丰富的插件生态
 ---
 
 ## 什么是 Hexo？

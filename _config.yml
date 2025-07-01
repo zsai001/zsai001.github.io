@@ -11,6 +11,11 @@ author: zsai001
 language: zh-CN
 timezone: Asia/Shanghai
 
+# SEO & Open Graph
+SEOTitle: zsai001的博客
+site_image: img/avatar.jpeg
+twitter_card: summary_large_image
+
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 ## 使用相对路径，方便本地开发和不同环境部署
