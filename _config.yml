@@ -106,19 +106,20 @@ sidebar-avatar: img/avatar.jpeg
 
 
 # weibo_username:     3286578617
-# zhihu_username:     ai-er-lan-xue-da
+# zhihu_username:     zsai010
 github_username:    zsai001
 twitter_username:   zsai010
-# facebook_username:  xiaotao.nie.5
-# linkedin_username:  小涛-聂-80964aba
+# facebook_username:  zsai001
+# linkedin_username:  zsai010
 
 
 # Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: git
-  repo: https://github.com/zsai001/zsai001.github.io
-  branch: gh-pages
+## 使用 GitHub Actions 自动部署，不需要配置 deploy 选项
+## Docs: https://hexo.io/docs/github-pages
+# deploy:
+#   type: git
+#   repo: https://github.com/zsai001/zsai001.github.io
+#   branch: gh-pages
 
 comment:
   type: giscus
