@@ -39,6 +39,45 @@
     -ms-overflow-style: none !important; /* IE and Edge */
 }
 
+/* TOC 紧凑样式 */
+.index-right .toc-article ol {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    margin: 0 !important;
+}
+
+.index-right .toc-article li {
+    padding-left: 6px !important;
+    margin-bottom: 2px !important;
+    border-left-width: 1px !important;
+}
+
+.index-right .toc-article li a {
+    font-size: 12px !important;
+    line-height: 16px !important;
+    margin-bottom: 4px !important;
+    padding: 2px 0 !important;
+}
+
+.index-right .toc-article li a span {
+    font-size: 12px !important;
+    line-height: 16px !important;
+}
+
+/* 嵌套层级的缩进调整 */
+.index-right .toc-article ol ol {
+    padding-left: 8px !important;
+}
+
+.index-right .toc-article ol ol li {
+    padding-left: 4px !important;
+}
+
+.index-right .toc-article ol ol li a {
+    font-size: 11px !important;
+    line-height: 14px !important;
+}
+
 /* 强制隐藏所有Webkit浏览器的滚动条 */
 .index-right .toc-article::-webkit-scrollbar,
 .index-right #toc::-webkit-scrollbar,
