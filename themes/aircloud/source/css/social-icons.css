@@ -65,6 +65,10 @@
   color: #0A66C2;
 }
 
+.social-links li a:hover[title="Telegram"] {
+  color: #0088CC;
+}
+
 /* 图标动画效果 */
 .social-links li a:hover .remix-icon {
   transform: scale(1.1);
