@@ -2,7 +2,7 @@
 
 .toc-article{
 
-  width: 240px;
+  width: 180px;
 
   &::-webkit-scrollbar {
     width: 0;
@@ -17,37 +17,37 @@
   .toc-title{
   }
   ol{
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 6px;
+    padding-right: 6px;
     cursor: pointer;
     font-size: 0;
   }
   li{
     font-size: 0;
     box-sizing: border-box;
-    border-left: 2px solid #cccccc;
+    border-left: 1px solid #cccccc;
     list-style: none;
-    padding-left: 10px;
+    padding-left: 6px;
     a{
       display: block;
-      line-height: 20px;
-      margin-bottom: 10px;
+      line-height: 16px;
+      margin-bottom: 6px;
       text-decoration: none;
       color: #999999;
-      font-size: 14px;
+      font-size: 12px;
       span{
         word-break: break-all;
       }
     }
   }
   li.active{
-    border-left: 2px solid @link-color;
+    border-left: 1px solid @link-color;
     &>a {
       color: @link-color;
     }
   }
   li:hover{
-    border-left: 2px solid @link-color;
+    border-left: 1px solid @link-color;
     &>a {
       color: @link-color;
     }
@@ -60,7 +60,7 @@
 .toc-fixed{
   position: fixed;
   top:10px;
-  width: 240px;
+  width: 180px;
   //max-height: 600px;
   //overflow: scroll;
   &::-webkit-scrollbar {

@@ -1,5 +1,7 @@
 /* 布局优化 - 解决文章区域太窄和布局不对称问题 */
 
+/* 滚动条优化由 scrollbar-fix.css 处理 */
+
 /* 扩大整体容器宽度，从1024px改为1400px */
 .index-container {
     width: 1400px !important;
@@ -39,13 +41,13 @@
     
     .index-right {
         right: 20px !important;
-        width: 240px !important;
+        width: 180px !important;
         max-height: calc(100vh - 120px) !important;
         overflow-y: auto !important;
     }
     
     .index-container .index-middle {
-        margin-right: 260px !important; /* 为右侧边栏留空间 */
+        margin-right: 220px !important; /* 为右侧边栏留空间 */
     }
 }
 

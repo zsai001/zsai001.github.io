@@ -1,0 +1,96 @@
+/* 社交媒体图标美化样式 - Remix Icons */
+
+.social-links {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin: 0 0 20px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-links li {
+  margin: 0;
+}
+
+.social-links li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  text-decoration: none;
+  color: #6b7280;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 6px;
+}
+
+.social-links li a:hover {
+  transform: translateY(-1px);
+  color: #374151;
+}
+
+/* Remix Icons 样式 */
+.social-links li a .remix-icon {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease;
+}
+
+/* 平台特定的悬停颜色 */
+.social-links li a:hover[title="X"] {
+  color: #000000;
+}
+
+.social-links li a:hover[title="知乎"] {
+  color: #0084FF;
+}
+
+.social-links li a:hover[title="微博"] {
+  color: #E6162D;
+}
+
+.social-links li a:hover[title="Facebook"] {
+  color: #1877F2;
+}
+
+.social-links li a:hover[title="GitHub"] {
+  color: #333333;
+}
+
+.social-links li a:hover[title="LinkedIn"] {
+  color: #0A66C2;
+}
+
+/* 图标动画效果 */
+.social-links li a:hover .remix-icon {
+  transform: scale(1.1);
+}
+
+/* 移动端优化 */
+@media screen and (max-width: 680px) {
+  .social-links {
+    gap: 12px;
+  }
+  
+  .social-links li a {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .social-links li a .remix-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .social-links li a:hover {
+    transform: translateY(0);
+  }
+  
+  .social-links li a:hover .remix-icon {
+    transform: scale(1.05);
+  }
+} 

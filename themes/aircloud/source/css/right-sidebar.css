@@ -5,37 +5,36 @@
     position: fixed;
     right: 20px;
     top: 100px;
-    width: 240px;
+    width: 180px;
     z-index: 50;
     max-height: calc(100vh - 120px); /* 设置最大高度，避免超出屏幕 */
     overflow-y: auto; /* 垂直滚动 */
-    scrollbar-width: none !important; /* Firefox */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-gutter: stable; /* 现代浏览器 */
     -ms-overflow-style: none !important; /* IE and Edge */
 }
 
 /* 隐藏右边栏容器的滚动条 */
 .index-right::-webkit-scrollbar {
-    width: 0 !important;
-    height: 0 !important;
+    width: 6px !important;
     background: transparent !important;
-    display: none !important;
 }
 
 .index-right::-webkit-scrollbar-thumb {
-    background: transparent !important;
-    display: none !important;
+    background: rgba(0, 0, 0, 0.2) !important;
+    border-radius: 3px !important;
 }
 
 .index-right::-webkit-scrollbar-track {
     background: transparent !important;
-    display: none !important;
 }
 
 /* TOC滚动样式优化 - 隐藏滚动条但保持滚动功能 */
 .index-right .toc-article {
     max-height: 100%;
     overflow-y: auto;
-    scrollbar-width: none !important; /* Firefox */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-gutter: stable; /* 现代浏览器 */
     -ms-overflow-style: none !important; /* IE and Edge */
 }
 
@@ -107,7 +106,7 @@
 
 /* 为右边栏留出空间 */
 .index-middle {
-    margin-right: 280px;
+    margin-right: 220px;
 }
 
 /* 移动端隐藏右边栏 */

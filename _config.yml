@@ -13,6 +13,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+## 使用相对路径，方便本地开发和不同环境部署
 url: https://zsai001.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -41,7 +42,7 @@ external_link:
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
-relative_link: false
+relative_link: true
 future: true
 syntax_highlighter: highlight.js
 highlight:
@@ -103,7 +104,8 @@ ignore:
 theme: aircloud
 
 sidebar-avatar: img/avatar.jpeg
-
+avatar_style:
+  radius: 50%
 
 # weibo_username:     3286578617
 # zhihu_username:     zsai010
