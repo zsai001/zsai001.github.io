@@ -8,12 +8,19 @@
 body,html{
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 body {
   margin-left: calc(100vw - 100%) !important;
   -webkit-text-size-adjust: none;
   // avoid the effect of the scrollbar's width
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .red{

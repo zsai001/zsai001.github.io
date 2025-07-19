@@ -11,31 +11,33 @@
     </button>
 </div>
 
-<div class="index-about">
-    <i> <%= config.subtitle %> </i>
-</div>
+<div class="page-wrapper">
+    <div class="index-about">
+        <i> <%= config.subtitle %> </i>
+    </div>
 
-<div class="index-container">
-    <% if(!is_current('/404')){%>
-    <div class="index-left">
-        <%- partial('_partial/nav', null, {cache: false}) %>
-        <div class="index-about-mobile">
-            <i> <%= config.subtitle %> </i>
+    <div class="index-container">
+        <% if(!is_current('/404')){%>
+        <div class="index-left">
+            <%- partial('_partial/nav', null, {cache: false}) %>
+            <div class="index-about-mobile">
+                <i> <%= config.subtitle %> </i>
+            </div>
         </div>
+        <% } %>
+        <div class="index-middle">
+            <!-- Main Content -->
+            <%- body %>
+        </div>
+        <% if(is_post()){ %>
+        <div class="index-right">
+            <%- partial('_partial/toc', {item: page, index: false}) %>
+        </div>
+        <% } %>
     </div>
-    <% } %>
-    <div class="index-middle">
-        <!-- Main Content -->
-        <%- body %>
-    </div>
-    <% if(is_post()){ %>
-    <div class="index-right">
-        <%- partial('_partial/toc', {item: page, index: false}) %>
-    </div>
-    <% } %>
-</div>
 
-<%- partial('_partial/footer', null, {cache: false}) %>
+    <%- partial('_partial/footer', null, {cache: false}) %>
+</div>
 
 </body>
 

@@ -1,0 +1,104 @@
+/* 滚动条布局优化 */
+
+/* 防止滚动条导致的布局偏移 */
+html {
+    scrollbar-gutter: stable;
+    overflow-y: scroll;
+}
+
+body {
+    scrollbar-gutter: stable;
+}
+
+/* 全局滚动条样式 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Firefox 滚动条样式 */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #c1c1c1 #f1f1f1;
+}
+
+/* 特定区域的滚动条样式 - 完全隐藏 */
+.index-right {
+    scrollbar-width: none !important; /* Firefox */
+    -ms-overflow-style: none !important; /* IE and Edge */
+}
+
+.index-right::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    background: transparent !important;
+    display: none !important;
+}
+
+.index-right::-webkit-scrollbar-thumb {
+    background: transparent !important;
+    display: none !important;
+}
+
+.index-right::-webkit-scrollbar-track {
+    background: transparent !important;
+    display: none !important;
+}
+
+/* TOC 滚动条样式 - 完全隐藏 */
+.toc-article {
+    scrollbar-width: none !important; /* Firefox */
+    -ms-overflow-style: none !important; /* IE and Edge */
+}
+
+.toc-article::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    background: transparent !important;
+    display: none !important;
+}
+
+.toc-article::-webkit-scrollbar-thumb {
+    background: transparent !important;
+    display: none !important;
+}
+
+.toc-article::-webkit-scrollbar-track {
+    background: transparent !important;
+    display: none !important;
+}
+
+/* 移动端优化 */
+@media screen and (max-width: 680px) {
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+    
+    .index-right::-webkit-scrollbar {
+        width: 0 !important;
+        height: 0 !important;
+        display: none !important;
+    }
+    
+    .toc-article::-webkit-scrollbar {
+        width: 0 !important;
+        height: 0 !important;
+        display: none !important;
+    }
+} 
