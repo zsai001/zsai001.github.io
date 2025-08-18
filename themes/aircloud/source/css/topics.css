@@ -1,0 +1,115 @@
+/* 专题页面样式 */
+.topic-content {
+    padding: 20px 0;
+}
+
+.topic-content h1 {
+    color: #333;
+    border-bottom: 2px solid #007acc;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.topic-post {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.topic-post:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.topic-post h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.topic-post h3 a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+.topic-post h3 a:hover {
+    color: #005a9e;
+}
+
+.post-meta {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.post-date {
+    margin-right: 15px;
+}
+
+.post-tags a {
+    color: #007acc;
+    text-decoration: none;
+    margin-right: 8px;
+}
+
+.post-tags a:hover {
+    text-decoration: underline;
+}
+
+.post-excerpt {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.topic-sidebar {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.topic-sidebar h4 {
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.topic-nav ul,
+.recent-posts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.topic-nav li,
+.recent-posts li {
+    margin-bottom: 10px;
+}
+
+.topic-nav a,
+.recent-posts a {
+    color: #007acc;
+    text-decoration: none;
+    display: block;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.topic-nav a:hover,
+.recent-posts a:hover {
+    color: #005a9e;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .topic-sidebar {
+        margin-top: 30px;
+    }
+    
+    .topic-post {
+        padding: 15px;
+    }
+}

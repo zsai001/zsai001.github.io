@@ -1,0 +1,35 @@
+<%- include('_partial/head') %>
+<body>
+    <%- include('_partial/nav') %>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="topic-content">
+                    <%- page.content %>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="topic-sidebar">
+                    <h4>专题导航</h4>
+                    <ul class="topic-nav">
+                        <li><a href="/topics/server-configuration">服务器配置专题</a></li>
+                        <li><a href="/topics/development">开发技术专题</a></li>
+                        <li><a href="/topics/life">生活随笔专题</a></li>
+                    </ul>
+                    
+                    <h4>最新文章</h4>
+                    <ul class="recent-posts">
+                        <% site.posts.sort('date', -1).limit(5).each(function(post){ %>
+                            <li><a href="<%- post.permalink %>"><%= post.title %></a></li>
+                        <% }); %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <%- include('_partial/footer') %>
+</body>
+</html>

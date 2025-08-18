@@ -2,7 +2,12 @@
 title: 技嘉 z282-93 折腾笔记
 date: 2025-08-18 01:05:20
 draft: true
+categories: 
+  - 服务器配置
 tags:
+  - 技嘉
+  - 服务器
+  - 硬件
 en_titile: 
 ---
 
